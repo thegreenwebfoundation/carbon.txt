@@ -11,7 +11,7 @@ Make it possible to verify claims about carbon neutral energy:
 - human readable, as well as machine readable
 
 
-# The general principle - _walk the chain til you reach carbon_
+# The general principle - _walk the graph til you reach carbon_
 
 We know that generating power to run our infrastructure either:
 
@@ -40,9 +40,13 @@ https://greenweb-regos.herokuapp.com/regos-a486ca7/CertificatesExternalPublicDat
 
 ### Walking the graph
 
-If you have a way to identify your upstream provider, and they can update their upstream and so on, there should a way to 'walk the graph', from _all the way to the energy used to power your website_ 🤯
+If you have a way to identify your upstream provider, and they can update their upstream and so on, there should a way to 'walk the graph', from _all the way to the energy used to power your website_.
 
-### What might this look like?
+While all we're verifying is that a claim is being made, we live in a world where we rely on these same structures to trust that money will go where we want it to, or that a website will point where we think it does.
+
+And in the real world, if we've narrowed down the claim from a cloudy statement like "we're sustainable!" to "we're run your service using this energy from this company", it's much easier to tell when companies are telling porkies, and hoping no one checks.
+
+### What might this look like in practice?
 
 
 If I host all the bits I need with one provider, like Krystal, might have a `carbon.txt` file at the root of my page, and it might look like this.
@@ -121,11 +125,19 @@ You can go further with this.
 
 If rather than just listing a provider, you list how much energy you're using, or how much carbon is offset, and then it becomes possible to verify if the energy providers named in carbon.txt files could _possibly_ have been able to support the claims made further the chain.
 
+Even without it, because just naming a provider is essentially narrowing the search space, even that helps, because if loads of companies are all naming one provider in one place that they get power from, we can _start_ to make assumptions about how plausible claims about using it for green power.
 
-## Why do we need this?
+## Why do we need this?
 
 There's almost no transparency around how we source power at the moment. The Green Web Foundation has been building a database, open sources the code for tracking this and is publishing open datasets about the state of the green web, but we need something that can go beyond a single organisation.
 
-But the more something can be independently verified, the less 
+So this is the idea. We'd like to work out how to support linking to other supporting documents that companies doing the right thing also produce, like:
+
+- SASB filings, [like ETSY's have done when filing to the SEC - see page 25](https://investors.etsy.com/financials/sec-filings/sec-filings-details/default.aspx?FilingId=13261228)
+- [CSR Reports](https://storage.googleapis.com/gweb-sustainability.appspot.com/pdf/Google_2018-Environmental-Report.pdf)
+- Providing useful detailed documentation from [cloud providers about how they account for the carbon they emit](https://storage.googleapis.com/gweb-sustainability.appspot.com/pdf/24x7-carbon-free-energy-data-centers.pdf) whilst making huge hoards of cash
+- Or even [publishing responses to NGOs working in this field, like the CDP](https://storage.googleapis.com/gweb-environment.appspot.com/pdf/alphabet-2017-cdp-climate-change-response.pdf)
+
+
 
 
