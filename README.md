@@ -134,7 +134,7 @@ There's almost no transparency around how we source power at the moment. The Gre
 So this is the idea. We'd like to work out how to support linking to other supporting documents that companies doing the right thing also produce, like:
 
 - SASB filings, [like ETSY's have done when filing to the SEC - see page 25](https://investors.etsy.com/financials/sec-filings/sec-filings-details/default.aspx?FilingId=13261228)
-- [CSR Reports](https://storage.googleapis.com/gweb-sustainability.appspot.com/pdf/Google_2018-Environmental-Report.pdf)
+- [CSR Reports, when they have actual, useful, numbers](https://storage.googleapis.com/gweb-sustainability.appspot.com/pdf/Google_2018-Environmental-Report.pdf)
 - Providing useful detailed documentation from [cloud providers about how they account for the carbon they emit](https://storage.googleapis.com/gweb-sustainability.appspot.com/pdf/24x7-carbon-free-energy-data-centers.pdf) whilst making huge hoards of cash
 - Or even [publishing responses to NGOs working in this field, like the CDP](https://storage.googleapis.com/gweb-environment.appspot.com/pdf/alphabet-2017-cdp-climate-change-response.pdf)
 
