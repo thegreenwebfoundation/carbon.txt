@@ -18,7 +18,7 @@ We know that generating power to run our infrastructure either:
 - results in carbon being emitted, which needs to be accounted for with some credit or compensation system, _or_
 - if sold, results in carbon credits being _generated_, which are registered with regulators
 
-If we know this, _until we end up at carbon registered somewhere_, we must assume claims are unreliable - and carbon is ending up in the atmosphere, when we use a service.
+If we know this, _until we end up at carbon registered somewhere_, we must assume claims are unreliable - and sadly, when we use any service, the carbon is ending up in the atmosphere.
 
 ### Making it more concrete
 
