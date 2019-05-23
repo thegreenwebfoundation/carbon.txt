@@ -93,12 +93,15 @@ Let's update these.
 www.netwisehosting.co.uk london
 ```
 
-And Netwise might have 
+And Netwise might have:
 
 ```
 [london]
 Ecotricity Group Ltd
 ```
+
+This might work at the datacentre level, or the region level, like Amazon - it's deliberately vague about the organisational subgrouping, to stay flexible enough to capture a 'green' claim being made.
+
 
 ## Getting to carbon if you can't change your infrastructure
 
