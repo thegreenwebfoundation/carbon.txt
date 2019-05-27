@@ -2,7 +2,7 @@
 
 A proposed convention for making it possible to verify that your infrastucture uses green power, by re-using existing governance structures, and already published data.
 
-_Note: this is all a draft. We are still working out how this might work, so please either leave an issue, or get in touch at hello@thegreenwebfoundation.org, if you would like to contribute._
+_Note: this is all a draft version. We are still working out how this might work, so please either leave an issue, or get in touch at hello@thegreenwebfoundation.org, if you would like to contribute._
 
 ## Goals
 
