@@ -46,7 +46,7 @@ If you have a way to identify your upstream provider, and they can update their 
 
 While all we're verifying is that a claim is being made, we live in a world where we rely on these same structures to trust that money will go where we want it to, or that a website will point where we think it does.
 
-And in the real world, if we've narrowed down the claim from a cloudy statement like "we're sustainable!" to "we're run your service using this energy from this company", it's much easier to tell when companies are telling porkies, and hoping no one checks.
+And in the real world, if we've narrowed down the claim from a cloudy statement like "we're sustainable!" to "we run your service using this energy from this company", it's much easier to tell when companies are telling porkies, and hoping no one checks.
 
 ### What might this look like in practice?
 
