@@ -1,0 +1,11 @@
+energy_provider = ["energy.example"]
+https://34sp.net/downloads/equinix-haven-certificate.pdf
+
+
+[disclosure]
+
+year = 2019
+sustainability_policy = "policy.pdf"
+
+net_zero_audit = "audit_statement.pdf"
+

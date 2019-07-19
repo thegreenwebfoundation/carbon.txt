@@ -1,0 +1,7 @@
+[upstream]
+
+[disclosure]
+
+year = 2019
+audit_report = ""
+https://34sp.net/downloads/equinix-haven-certificate.pdf

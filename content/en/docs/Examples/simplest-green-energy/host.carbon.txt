@@ -1,0 +1,31 @@
+[upstream]
+# an example here would be 34SP, who host at equinix
+providers = ["datacenter.example"]
+
+
+
+# in the case of krystal who host with netwise
+providers = [
+
+  [netwise]
+  region="london"
+  provider="ecotricity"
+
+
+]
+
+# if there is only one datacentre
+[providers]
+  [all]
+  provider=ecotricity
+
+# if only one provider is green. if this is listed by downstrream,
+# and they do not list that DC, we assume it's not green
+
+[providers]
+  [netwise]
+  grouping=london
+  provider=ecotricity
+
+
+[providers]
