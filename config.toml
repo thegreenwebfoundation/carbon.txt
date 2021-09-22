@@ -27,8 +27,8 @@ pygmentsUseClassic = false
 # See https://help.farbox.com/pygments.html
 pygmentsStyle = "tango"
 
- # First one is picked as the Twitter card image if not set on page.
- #images = ["images/project-illustration.png"]
+# First one is picked as the Twitter card image if not set on page.
+#images = ["images/project-illustration.png"]
 
 # Configure how URLs look like per section.
 [permalinks]
@@ -58,7 +58,7 @@ id = "UA-00000000-0"
 [languages.en]
 title = "carbon.txt"
 description = "Verifible green web"
-languageName ="English"
+languageName = "English"
 # Weight used for sorting.
 weight = 1
 
@@ -123,18 +123,17 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 #         desc = "Practical questions and curated answers"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
-	name = "GitHub"
-	url = "https://github.com/thegreenwebfoundation/carbon.txt"
-	icon = "fab fa-github"
-        desc = "Development takes place here!"
+name = "GitHub"
+url = "https://github.com/thegreenwebfoundation/carbon.txt"
+icon = "fab fa-github"
+desc = "Development takes place here!"
 [[params.links.developer]]
-	name = "Slack"
-	url = "https://climateaction.tech"
-	icon = "fab fa-slack"
-        desc = "Chat with other project developers"
+name = "Slack"
+url = "https://climateaction.tech"
+icon = "fab fa-slack"
+desc = "Chat with other project developers"
 # [[params.links.developer]]
 # 	name = "Developer mailing list"
 # 	url = "https://example.org/mail"
 # 	icon = "fa fa-envelope"
 #         desc = "Discuss development issues around the project"
-
