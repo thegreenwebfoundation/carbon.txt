@@ -3,7 +3,7 @@
 
 [Upstream Providers]
 
-# while a website might rely on a single provider, it's common to rely on other providers: google for analyics, or another CDN, and so on. Let's assume a simple site is hosted just by one org for this example
+# while a website might rely on a single provider, it's common to rely on other providers: google for analytics, or another CDN, and so on. Let's assume a simple site is hosted just by one org for this example
 
 providers = [<URL for company>]
 
