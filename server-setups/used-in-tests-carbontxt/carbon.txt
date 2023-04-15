@@ -1,0 +1,8 @@
+[upstream]
+providers = []
+
+[org]
+
+credentials = [
+{ domain='used-in-tests.carbontxt.org', doctype = 'sustainability-page', url = 'https://used-in-tests.carbontxt.org/our-climate-record'}
+]
