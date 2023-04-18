@@ -103,7 +103,7 @@ _An example of a carbon.txt file for a digital service provider._
 It is to be expected that one digital service provider might own and provide services through multiple domains. In this case, you can maintain a single carbon.txt at one domain (e.g. _<https://my-org.com/.well-known/carbon.txt>_) and refer other domains to that single source of truth. To do this:
 
 1. Complete the steps above to register as a provider, and create a carbon.txt file.
-2. **Generate a public key for your account** \
+2. **Generate a domain hash for your account** \
    To do this, use the Observable Notebook linked below: \
    [https://observablehq.com/d/17c922a33a5d6867](https://observablehq.com/d/17c922a33a5d6867) \
    (Note: We understand this is solution is not ideal & are working on a nicer way to generate secrets)
@@ -112,7 +112,7 @@ It is to be expected that one digital service provider might own and provide ser
    For example: _my-org.com_ also owns _me.my-org.com_. In order to link _me.my-org.com_ to the main carbon.txt file, they would create a TXT record that looks something like:
 
    ```DNS
-   TXT me.my-org.com carbon-txt=<https://my-org.com/.well-known/carbon.txt> generated_public_key
+   TXT me.my-org.com carbon-txt=<https://my-org.com/.well-known/carbon.txt> generated_domain_hash
    ```
 
 #### For digital service providers who want to pass on their green claims to users of their service
@@ -120,7 +120,7 @@ It is to be expected that one digital service provider might own and provide ser
 Providers may want to broadcast that all the websites using their service are also running on green energy. To do this, they can use the [HTTP Via header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/via).
 
 1. Complete the steps above to register as a provider, and create a carbon.txt file.
-2. **Generate a public key for your account** \
+2. **Generate a domain hash for your account** \
    To do this, use the Observable Notebook linked below: \
    [https://observablehq.com/d/17c922a33a5d6867](https://observablehq.com/d/17c922a33a5d6867) \
    (Note: We understand this is solution is not ideal & are working on a nicer way to generate secrets)
@@ -128,7 +128,7 @@ Providers may want to broadcast that all the websites using their service are al
    You can now set via headers for requests that go through your service. This allows you to broadcast that the request has come from your service, and point to your carbon.txt file. A valid via header would look like:
 
    ```HTTP
-    Via: 1.1 <https://my-org.com/.well-known/carbon.txt> generated_public_key
+    Via: 1.1 <https://my-org.com/.well-known/carbon.txt> generated_domain_hash
    ```
 
 ### For Individual Website Owners
