@@ -2,26 +2,28 @@
 
 ## What is carbon.txt?
 
-A proposed convention for making it possible for website owners and services providers to verify that their infrastructure uses green power. This is achieved by re-using existing governance structures, already published data, and existing industry standards.
+A proposed convention for website owners and digital service providers to demonstrate that their digital infrastructure runs on green power. This is achieved by reusing existing governance structures, already published data, and existing industry standards.
 
-_Note: this is all a draft version. We are still working out how this might work, so please either leave an issue, or get in touch at hello@thegreenwebfoundation.org, if you would like to contribute._
+_Note: this is a draft version and we are still ironing out how this might work. If you would like to contribute or have questions, please [open a GitHub issue](https://github.com/thegreenwebfoundation/carbon.txt/issues) or email [fershad@thegreenwebfoundation.org](mailto:fershad@thegreenwebfoundation.org).
 
 ## What are the goals?
 
 Having a convention around how website owners and service providers disclose this kind of information allows for two things:
 
 1. It brings this information into the public domain in a way that is consistent, and easily accessible.
-2. It lays the groundwork for a future where checking if a website/service uses green energy is not locked to a single database or organisation.
+2. It lays the groundwork for a future where checking if a website/service uses green energy is democratised, and not locked to a single database or organisation.
 
-In order to achieve this, we believe that any proposed convention should be created:
+In order to achieve this, we believe that any proposed convention, such as carbon.txt, should:
 
-- using as much existing infrastructure as possible (we already have structures and governance for making the internet work)
-- open source, so it can be built into modern tooling for continuous delivery , or existing platforms and software
-- human readable, as well as machine readable
+- use as much existing infrastructure as possible, especially as we already have structures and governance for making the internet work;
+- be open source, so it can easily be built into modern tooling for continuous delivery and existing platforms/software;
+- be human readable, as well as machine readable.
 
 ## Why do we need this?
 
-There's almost no transparency around how we source power at the moment. The Green Web Foundation has been building a database, open sources the code for tracking this and is publishing open datasets about the state of the green web, but we need something that can go beyond a single organisation.
+There's almost no transparency around how we source power at the moment. Green Web Foundation has been building a [Green Domains database](https://www.thegreenwebfoundation.org/green-web-datasets/), open sources [the code for tracking this](https://github.com/thegreenwebfoundation/admin-portal) and is publishing [open datasets about the state of the green web](https://datasets.thegreenwebfoundation.org/).
+
+But we need something more. Something that can endure beyond a single organisation. **We need a convention like carbon.txt**.
 
 ## What are the benefits?
 
@@ -30,18 +32,21 @@ The carbon.txt convention has two main user groups:
 - Digital service providers (CDNs, hosting providers, managed services)
 - Individual website owners
 
-For digital service providers, there are a number of benefits that come with this convention.
+### For digital service providers
 
-- They have a means through which they can broadcast that the infrastructure they manage or use to provide their service runs on green power.
-- They have an open, transparent, publicly accessible way through which they can acknowledge and justify any green or carbon neutral credentials they are claiming.
-- It provides a way for digital service providers to be identified themselves in GreenChecks. Take the example of _The Really Green CDN Company_ who offers a CDN service that runs on Google’s infrastructure. Currently, when a check is run against a site hosted on _The Really Green CDN Company’s_ network, the results returned would say the site is hosted by Google. After _The Really Green CDN Company_ implement the carbon.txt specification on their services, results from a GreenCheck would return showing the site hosted by _The Really Green CDN Company_ as well as any evidence linking to their use of Google’s services.
-- The convention also provides a way for a service provider to “pass on” this green accreditation to the websites that use their service.
+Providers are able to:
 
-For individual website owners:
+- Broadcast that the infrastructure they manage or use to provide their service runs on green power, in an open, transparent and publicly accessible way.
+- Acknowledge and justify any green or carbon neutral credentials they are claiming. 
+- Identify themselves as an upstream provider in digital supply chains through [Green Web Checks](https://www.thegreenwebfoundation.org/green-web-check/). Take the example of _The Really Green CDN Company_ who offers a CDN service that runs on Google’s infrastructure. Currently, when a check is run against a site hosted on _The Really Green CDN Company’s_ network, the results returned would say the site is hosted by Google. After _The Really Green CDN Company_ implement carbon.txt on their services, results from a GreenCheck would return showing the site is hosted by _The Really Green CDN Company_ as well as any evidence linking to their use of Google’s services.
+- “Pass on” their green credentials to websites or other downsteam services that use them.
 
-- They might not want to wait for my hosting provider to make DNS or HTTP Header changes. In this case, I can create my own carbon.txt file which can be used to indicate which provider I am using.
-- They might have their own, more detailed information to share.
-- Or, they might be using multiple providers for different parts of my website (e.g. one web host, another provider for images, another for advertising, and another for video). A carbon.txt file can also be used in this case, to indicate the different providers used on a site. This could then be used as a reference by other projects like the HTTP Archive’s Web Almanac, or by other services that aim to capture the overall “greenness” of the web.
+### For individual website owners
+
+Website owners are able to:
+
+- Create their own carbon.txt file which can be used to indicate which provider they are using. This is helpful if they do not want to wait for their upstream provider/s to make their own DNS or HTTP Header changes. 
+- Share their own, more detailed information. For example, they might be using multiple providers for different parts of their website. They may have a web host, another provider for images, another for advertising, another for video etc. Such information could then be used as a reference by other projects, like the [HTTP Archive’s Web Almanac](https://almanac.httparchive.org/en/2022/), or by other services that aim to capture the overall "greenness" of the web.
 
 ## How it works
 
