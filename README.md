@@ -4,7 +4,7 @@
 
 A proposed convention for website owners and digital service providers to demonstrate that their digital infrastructure runs on green power. This is achieved by reusing existing governance structures, already published data, and existing industry standards.
 
-_Note: this is a draft version and we are still ironing out how this might work. If you would like to contribute or have questions, please [open a GitHub issue](https://github.com/thegreenwebfoundation/carbon.txt/issues) or email [fershad@thegreenwebfoundation.org](mailto:fershad@thegreenwebfoundation.org).
+_Note: this is a draft version and we are still ironing out how this might work. If you would like to contribute or have questions, please [open a GitHub issue](https://github.com/thegreenwebfoundation/carbon.txt/issues) or email [fershad@thegreenwebfoundation.org](mailto:fershad@thegreenwebfoundation.org)._
 
 ## What are the goals?
 
@@ -37,15 +37,15 @@ The carbon.txt convention has two main user groups:
 Providers are able to:
 
 - Broadcast that the infrastructure they manage or use to provide their service runs on green power, in an open, transparent and publicly accessible way.
-- Acknowledge and justify any green or carbon neutral credentials they are claiming. 
+- Acknowledge and justify any green or carbon neutral credentials they are claiming.
 - Identify themselves as an upstream provider in digital supply chains through [Green Web Checks](https://www.thegreenwebfoundation.org/green-web-check/). Take the example of _The Really Green CDN Company_ who offers a CDN service that runs on Google’s infrastructure. Currently, when a check is run against a site hosted on _The Really Green CDN Company’s_ network, the results returned would say the site is hosted by Google. After _The Really Green CDN Company_ implement carbon.txt on their services, results from a GreenCheck would return showing the site is hosted by _The Really Green CDN Company_ as well as any evidence linking to their use of Google’s services.
-- “Pass on” their green credentials to websites or other downsteam services that use them.
+- “Pass on” their green credentials to websites or other downstream services that use them.
 
 ### For individual website owners
 
 Website owners are able to:
 
-- Create their own carbon.txt file which can be used to indicate which provider they are using. This is helpful if they do not want to wait for their upstream provider/s to make their own DNS or HTTP Header changes. 
+- Create their own carbon.txt file which can be used to indicate which provider they are using. This is helpful if they do not want to wait for their upstream provider/s to make their own DNS or HTTP Header changes.
 - Share their own, more detailed information. For example, they might be using multiple providers for different parts of their website. They may have a web host, another provider for images, another for advertising, another for video etc. Such information could then be used as a reference by other projects, like the [HTTP Archive’s Web Almanac](https://almanac.httparchive.org/en/2022/), or by other services that aim to capture the overall "greenness" of the web.
 
 ## How it works
@@ -56,7 +56,7 @@ When checking a website, the following checks are performed:
 2. Check there if there is `carbon-txt` DNS TXT record for the given domain.
 3. Perform an HTTP request at [https://domain.com/carbon.txt](https://domain.com/carbon.txt), OR the override URL given as the value in the DNS TXT lookup.
 4. If there is valid 200 response and a parseable file, parse the file.
-5. If there is a no valid 200/OK response at domain.com/carbon.txt (i.e. a 404, or 403), check the HTTP for a `Via` header with a new domain, as a new domain to check.
+5. If there is a no valid 200/OK response at domain.com/carbon.txt (i.e. a 404, or 403), check the HTTP response for a `Via` header with a new domain, as a new domain to check.
 6. Repeat steps 1 through 5 until we end up with a 200 response with a parsable carbon.txt payload, or bad request (i.e. 40x, 50x).
 
 Once there is a parseable carbon.txt file, the domain the carbon.txt belongs to is used as a lookup key against a known list of domains associated with a provider. If there is a match, the site is assumed to be running at the provider, and shows as green.
@@ -130,7 +130,7 @@ Providers may want to broadcast that all the websites using their service are al
    [https://observablehq.com/d/17c922a33a5d6867](https://observablehq.com/d/17c922a33a5d6867) \
    (Note: We understand this is solution is not ideal & are working on a nicer way to generate secrets)
 3. **Set via headers for on requests generated/processed by your service** \
-   You can now set via headers for requests that go through your service. This allows you to broadcast that the request has come from your service, and point to your carbon.txt file. A valid via header would look like:
+   You can now set via headers for responses that go through your service. This allows you to broadcast that the response has come from your service, and point to your carbon.txt file. A valid via header would look like:
 
    ```HTTP
     Via: 1.1 <https://my-org.com/.well-known/carbon.txt> generated_domain_hash
