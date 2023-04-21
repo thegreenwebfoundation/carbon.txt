@@ -70,7 +70,7 @@ If you operate a website, or run an application yourself, you are able to:
    The Green Web Foundation has an API for registering where to check for carbon.txt file for a given domain. Once this is listed, and the link established, your site shows as green.
 
    ```curl
-   curl --location 'https://api.thegreenwebfoundation.org/api/v3/carbontxt' \
+   curl --request POST --location 'https://api.thegreenwebfoundation.org/api/v3/carbontxt' \
    --header 'Content-Type: application/json' \
    --data '{ "url": "https://my-org.com/carbon.txt" }'
    ```
