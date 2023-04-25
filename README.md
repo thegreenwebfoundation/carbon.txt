@@ -86,7 +86,7 @@ If you operate a website, or run an application yourself, you are able to:
 
 ### Carbon.txt file syntax for digital service providers
 
-The carbon.txt syntax is written in TOML. Aan example of what a carbon.txt file might look like for a digital service provider.
+The carbon.txt syntax is written in TOML. An example of what a carbon.txt file might look like for a digital service provider.
 
 ```toml
 [upstream]
