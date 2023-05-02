@@ -115,9 +115,8 @@ The carbon.txt syntax is also written in TOML. A carbon.txt example for an indiv
 ```toml
 [upstream]
 providers = [
-    # These providers include my hosting (Cloudflare Pages),
+    # These providers include my hosting,
     # as well as all the third-party services I use on this site.
-    # I feel it makes sense to keep these all together.
     { domain = "cloudflare.com", service = "hosting" },
     { domain = "usefathom.com", service = "analytics" },
     { domain = "cloudinary.com", service = "media" }
