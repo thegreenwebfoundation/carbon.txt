@@ -164,6 +164,7 @@ To do this:
 3. **Create a shared secret for your provider**
 
    Create a shared secret by sending an authenticated request to the Green Web CarbonTxt Shared Secret API endpoint.
+   Note: The username and password used in the `Authorization` header should be your Green Web Foundation Admin Portal username and password.
 
    ```curl
    curl --location --request POST 'https://api.thegreenwebfoundation.org/api/v3/carbontxt_shared_secret' \
