@@ -21,15 +21,15 @@ In order to achieve this, we believe that any proposed convention should:
 
 ## Why do we need this?
 
-We need a fossil free internet by 2030, but there's still not much transparency around how we source power at the moment. The Green Web Foundation has been building a [Green Domains database](https://www.thegreenwebfoundation.org/green-web-datasets/), open sources [the code for tracking this](https://github.com/thegreenwebfoundation/admin-portal) and is publishing [open datasets about the state of the green web](https://datasets.thegreenwebfoundation.org/).
+We need a fossil free internet by 2030. But right now there's still not much transparency around how we source power. 
 
-Creating this dataset has been an ongoing effort for years. It has comprised of associating IP address space like IP ranges or Autonomous System Numbers with specific organisations - and then accompanying these links to manually verified written reports and certificates provided by said organisations to back up their green claims.
+To address this, Green Web Foundation has been building a [Green Domains database](https://www.thegreenwebfoundation.org/green-web-datasets/), open sources [the code for tracking this](https://github.com/thegreenwebfoundation/admin-portal) and is publishing [open datasets about the state of the green web](https://datasets.thegreenwebfoundation.org/). Creating this dataset has been an ongoing effort for years. It has involved associating IP address space like IP ranges or Autonomous System Numbers with specific organisations, then manually verifying written reports and certificates provided by said organisations to back up their green claims.
 
-This has worked for the first few million domains, and first few billion checks against the database, but there are more tools that can help now, and the internet is a much bigger, more dynamic place than it was when this endeavour was started.
+This has worked for the first few million domains, and first few billion checks against the database. But the internet is a much bigger, more dynamic place than it was when this endeavour was started. Our approach needs to evolve with the times.
 
-Tools like the domain name system (DNS) allow for a variety of ways to establish a link between a domain and the party that is hosting or operating it. Dedicated registries already exist to make it possible to trust that electricity has been generated from clean and renewable energy sources. And, if you know where to look, it's possible to tell when efforts to decarbonise energy are credible.
+Luckily, today there are more tools that can help. Tools like the Domain Name System (DNS). DNS provides a variety of ways to establish a link between a domain and the party that is hosting or operating it. There are also dedicated registries that make it possible to trust that electricity has been generated from clean and renewable energy sources. And, if you know where to look, it's possible to tell when efforts to decarbonise energy are credible.
 
-Carbon.txt serves to make links between these systems easier to follow, so when there is a claim that a website is running on green energy, you can trace the provenance down to the supporting evidence more easily.
+Carbon.txt serves to make links between these systems easier to follow. So when there is a claim that a website is running on green energy, you can trace the provenance of supporting evidence more easily.
 
 ## What are the benefits?
 
@@ -37,44 +37,46 @@ Carbon.txt serves to make links between these systems easier to follow, so when 
 
 If you provide hosted digital services to others, carbon.txt lets you:
 
-- Receive recognition in a human readable and machine readable way that the infrastructure you manage or use to provide your service runs on green energy.
+- Receive recognition, in a human and machine readable way, that the infrastructure you manage or use to provide your service runs on green energy.
 - Earn trust from customers by helping creating an evidence base of action being taken by providers to help the world transition to a fossil free internet.
 - Allow any downstream services or websites using your services to make the same claims, with a clear chain of attribution.
-- Demonstrate leadership if you are moving faster in terms of a climate repsonse than the organisations in your supply chain by linking to your own work.
+- Demonstrate leadership if you are moving faster in terms of a climate response than the organisations in your supply chain by linking to your own work.
 
 ## Getting started
 
 ### For Digital Service Providers
 
-1. **Register with The Green Web Foundation**
+1. **Register with Green Web Foundation**
 
-   As a digital service provider, you should first [register yourself with The Green Web Foundation](https://www.thegreenwebfoundation.org/green-web-check/register/), and provide evidence of your green claims.
+   As a digital service provider, you should first [register with The Green Web Foundation](https://www.thegreenwebfoundation.org/green-web-check/register/), and provide evidence of your green claims.
 
 2. **Create a carbon.txt file for your organisation**
 
    Create a carbon.txt file for your organisation. There is [a guide](#carbontxt-file-syntax-for-digital-service-providers) to the expected syntax below.
 
-   For example: _<https://www.my-org.com/carbon.txt>_
+3. **Upload your carbon.txt file to your servers**   
+  
+  	For example: _<https://www.my-org.com/carbon.txt>_
 
-   We default to checking at for a file located at the root of your domain (e.g. `/carbon.txt`), but if you need to store the file at a different path, we support setting your own path, like `.well-known/carbon.txt`. We [outline how](#how-to-link-two-domains-using-dns-txt-records-and-domain-hashes) further below.
+   	We default to checking for a file located at the root of your domain (e.g. `/carbon.txt`). If you need to store the file at a different path, we support setting your own path, like `.well-known/carbon.txt`. We [outline how](#how-to-link-two-domains-using-dns-txt-records-and-domain-hashes) further below.
 
-3. **Share the URL of the carbon.txt file with the Green Web Foundation**
+4. **Share the URL of the carbon.txt file with Green Web Foundation**
 
    The Green Web Foundation has an API for registering where to check for carbon.txt file for a given domain. Once this is listed, and the link established, your site shows as green.
 
    ```curl
-   curl --location 'https://api.thegreenwebfoundation.org/api/v3/carbontxt' \
+   curl --request POST --location 'https://api.thegreenwebfoundation.org/api/v3/carbontxt' \
    --header 'Content-Type: application/json' \
    --data '{ "url": "https://my-org.com/carbon.txt" }'
    ```
 
-4. **(Optional) Link other domains to your green claims if they are using infrastructure you control**
+5. **(Optional) Link other domains to your green claims if they are using infrastructure you control**
 
    If you offer managed hosted services to other organisations, once your first link is established there is an automated process for listing future domains so they show up as green too, with attribution to you. See [_domain hashes_](#linking-green-claims-to-multiple-domains-with-domain-hashes) below for more.
 
 ### Carbon.txt file syntax for digital service providers
 
-The carbon.txt syntax is written in TOML. Below is an example of what a carbon.txt file might look like for a digital service provider.
+The carbon.txt syntax is written in TOML. An example of what a carbon.txt file might look like for a digital service provider.
 
 ```toml
 [upstream]
@@ -103,15 +105,15 @@ In this case, you can maintain a single carbon.txt file at one domain (e.g. _<ht
 There are two supported ways to do this:
 
 1. Using DNS TXT records, which contain the specific URL pointing to the carbon.txt file to read.
-2. Using a dedicated `Via` HTTP Header, again containing a URL for the carbon.txt file to read.
+2. Using a dedicated HTTP Via Header, again containing a URL for the carbon.txt file to read.
 
-The first of these is intended for organisations who are able to add DNS records to both their own domain, as well as the domain they want to show up as green. If you own both domains, this option is for you.
+The first of these, using DNS TXT records, is intended for organisations who are able to add DNS records to both their own domain, as well as the domain they want to show up as green. If you own both domains, this option is for you.
 
-The second is intended for organisations who are not able to add DNS records for the domain they want to show up as green, but do accept HTTP requests for the domain, and serve responses for it. If you operate a CDN, a managed Wordpress service, or a general Platform-As-A-Service offering, this usually better suited for your use case.
+The second, a HTTP Via Header, is intended for organisations who are not able to add DNS records for the domain they want to show up as green, but do accept HTTP requests for the domain, and serve responses for it. If you operate a CDN, a managed Wordpress service, or a general Platform-As-A-Service offering, this is usually better suited for your use case.
 
 ### How to link two domains using DNS TXT records and domain hashes
 
-DNS text records are frequently used to help organisations demonstrate they have control over a domains. The DNS TXT record approach follows similar principles.
+DNS text records are frequently used to help organisations demonstrate they have control over a domain. The DNS TXT record approach follows similar principles.
 
 To do this:
 
@@ -121,11 +123,11 @@ Follow Steps 1 to 3 of the [Getting Started guide](#getting-started) above to cr
 
 2. **Create a domain hash for the domain you want to show as green**
 
-   You create a domain hash. This is a SHA256 hash of your shared secret and the domain you want to establish a link to. Various online tools demonstrate how to make SHA 256 hashes( [see this example](https://codebeautify.org/sha256-hash-generator)). To make it easier, you can do all this in [our own observable notebook](https://observablehq.com/d/21dbe07b6d399868).
+   Create a domain hash. This is a SHA256 hash of your shared secret and the domain you want to establish a link to. Various online tools demonstrate how to make SHA 256 hashes ([see this example](https://codebeautify.org/sha256-hash-generator)). To make it easier, you can do all this in [our own observable notebook](https://observablehq.com/d/21dbe07b6d399868).
 
 3. **Set a DNS record for the domains you want to link back to your main carbon.txt, containing the domain hash**
 
-   You add the generated domain hash as a final, optional part of the DNS TXT record defining the domain you want to link back to your main carbon.txt file, along with the location of the carbon.txt file and the generated hash.
+   Add the generated domain hash as a final, optional part of the DNS TXT record defining the domain you want to link back to your main carbon.txt file, along with the location of the carbon.txt file and the generated hash.
 
    For example: _my-org.com_ also owns _me.my-org.com_. In order to link _me.my-org.com_ to the main carbon.txt file, they would create a TXT record that looks something like:
 
@@ -135,11 +137,11 @@ Follow Steps 1 to 3 of the [Getting Started guide](#getting-started) above to cr
 
    **Note:** you can see an example DNS TXT record for the domain [delegating-with-txt-record.carbontxt.org](https://delegating-with-txt-record.carbontxt.org) using online tools like [nslookup.io](https://www.nslookup.io/domains/delegating-with-txt-record.carbontxt.org/dns-records/txt/)
 
-#### How to link two domains using HTTP Via headers domain hashes
+### How to link two domains using HTTP Via headers domain hashes
 
 HTTP requests and responses can contain a number of extra headers, which you can use to send along extra metadata about the server serving the request.
 
-Carbon.txt supports using the [HTTP Via header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/via), to declare that a HTTP response has been sent along by one or more intermediate entities - in our case usually a managed hosting provider.
+Carbon.txt supports using the [HTTP Via header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/via), to declare that a HTTP response has been sent along by one or more intermediate entities. In our case usually a managed hosting provider.
 
 1. **Follow the steps above to create your carbon.txt file**
 
@@ -147,7 +149,7 @@ Follow Steps 1 to 3 of the [Getting Started guide](#getting-started) above to cr
 
 4. **Create a domain hash for the domain you want to show as green**
 
-   You create a domain hash. This is a SHA256 hash of your shared secret and the domain you want to establish a link to. Various online tools demonstrate how to make SHA 256 hashes( [see this example](https://codebeautify.org/sha256-hash-generator)). To make it easier, you can do all this in [our own observable notebook](https://observablehq.com/d/21dbe07b6d399868).
+   Create a domain hash. This is a SHA256 hash of your shared secret and the domain you want to establish a link to. Various online tools demonstrate how to make SHA 256 hashes( [see this example](https://codebeautify.org/sha256-hash-generator)). To make it easier, you can do all this in [our own observable notebook](https://observablehq.com/d/21dbe07b6d399868).
 
 5. **Set the `via` header on HTTP responses to requests for the domain you want to show as green**
 
@@ -185,7 +187,7 @@ Primarily, we are adopting an approach which leans heavily on existing web stand
 
 We believe that providing a way for hosting providers/managed services to implement the carbon.txt specification for their product/s is key to broader adoption. It allows us, as a small not-for-profit driving this idea, to have a much larger reach & impact when compared to the alternative of relying on individuals to upload carbon.txt files to their own domains.
 
-In the long run, we think that by demonstrating that you can use existing internet and web standards to link to make sustainability claims easily discoverable, as well as human and machine readable, conventions like carbon.txt will result in a web where it's easier to trust green claims, as well as follow them all the way back to the supporting evidence used to back them up.
+In the long run, we think that demonstrating how we can use existing internet and web standards to make sustainability claims easily discoverable, as well as human and machine readable, will result in a web where it's easier to trust green claims. Not only that, conventions like carbon.txt allows us follow green claims to the supporting evidence used to back them up.
 
 ### What would stop me using someone else's carbon.txt file instead?
 
@@ -201,6 +203,6 @@ There are two ways to associate a domain with a verified green hosting provider:
 
 The internet is a distributed network by its very nature. And, many hosting providers - especially CDNs and edge compute services - will serve content from locations around the world. Some of these locations could be in regions that run entirely (or almost entirely) on green energy.
 
-At present, carbon.txt is designed to work at an organisational level, for organisations aiming to demonstrate that 100% of the carbon emissions associated with operating digital infrastructure have beenb accounted for.
+At present, carbon.txt is designed to work at an organisational level, for organisations aiming to demonstrate that 100% of the carbon emissions associated with operating digital infrastructure have been accounted for.
 
-We are looking into ways to surface greater geographic resolution for location-based carbon intensity, to reflect the physical reality. If you're interested in collaborating, please [get in touch](mailto:fershad@thegreenwebfoundation.org).
+We're looking into ways and funding to surface greater geographic resolution for location-based carbon intensity, to reflect the physical reality. If you're interested in collaborating or funding our work, please [get in touch](mailto:fershad@thegreenwebfoundation.org).
