@@ -21,7 +21,7 @@ In order to achieve this, we believe that any proposed convention should:
 
 ## Why do we need this?
 
-We need a fossil free internet by 2030. But right now there's still not much transparency around how we source power. 
+We need a fossil free internet by 2030. But right now there's still not much transparency around how we source power.
 
 To address this, Green Web Foundation has been building a [Green Domains database](https://www.thegreenwebfoundation.org/green-web-datasets/), open sources [the code for tracking this](https://github.com/thegreenwebfoundation/admin-portal) and is publishing [open datasets about the state of the green web](https://datasets.thegreenwebfoundation.org/). Creating this dataset has been an ongoing effort for years. It has involved associating IP address space like IP ranges or Autonomous System Numbers with specific organisations, then manually verifying written reports and certificates provided by said organisations to back up their green claims.
 
@@ -54,8 +54,8 @@ If you provide hosted digital services to others, carbon.txt lets you:
 
    Create a carbon.txt file for your organisation. There is [a guide](#carbontxt-file-syntax-for-digital-service-providers) to the expected syntax below.
 
-3. **Upload your carbon.txt file to your servers**   
-  
+3. **Upload your carbon.txt file to your servers**
+
   	For example: _<https://www.my-org.com/carbon.txt>_
 
    	We default to checking for a file located at the root of your domain (e.g. `/carbon.txt`). If you need to store the file at a different path, we support setting your own path, like `.well-known/carbon.txt`. We [outline how](#how-to-link-two-domains-using-dns-txt-records-and-domain-hashes) further below.
@@ -119,7 +119,7 @@ To do this:
 
 1. **Follow the steps above to create your carbon.txt file**
 
-Follow Steps 1 to 3 of the [Getting Started guide](#getting-started) above to create a carbon.txt file for your organisation.
+Follow Steps 1 to 4 of the [Getting Started guide](#getting-started) above to create a carbon.txt file for your organisation.
 
 2. **Create a domain hash for the domain you want to show as green**
 
@@ -145,7 +145,7 @@ Carbon.txt supports using the [HTTP Via header](https://developer.mozilla.org/en
 
 1. **Follow the steps above to create your carbon.txt file**
 
-Follow Steps 1 to 3 of the [Getting Started guide](#getting-started) above to create a carbon.txt file for your organisation.
+Follow Steps 1 to 4 of the [Getting Started guide](#getting-started) above to create a carbon.txt file for your organisation.
 
 4. **Create a domain hash for the domain you want to show as green**
 
