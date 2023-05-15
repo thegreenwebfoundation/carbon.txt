@@ -1,10 +1,15 @@
-# we assume most sites have one main provider which might provide the servers used to serve content
-# if you know this, you can look up that provider's carbon.txt file to make it possible to start walking the graph.
+## This is a sample carbon.txt file for a digital service provider.
 
-[Upstream Providers]
+[upstream]
+providers = [
+    # An array of providers my-org.com is using to deliver our service
+    { domain='cloud.google.com', service = 'shared-hosting' },
+    { domain='aws.amazon.com', service = 'cdn' }
+]
 
-# while a website might rely on a single provider, it's common to rely on other providers: google for analytics, or another CDN, and so on. Let's assume a simple site is hosted just by one org for this example
-
-providers = [<URL for company>]
-
-# That's all you need
+[org]
+credentials = [
+    # Optional.
+    # An array of documents that point to evidence of green claims made by my-org.com.
+    { domain='my-org.com', doctype = 'sustainability-page', url = 'https://my-org.com/our-climate-record'}
+]
