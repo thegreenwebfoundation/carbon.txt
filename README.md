@@ -62,9 +62,9 @@ If you provide hosted digital services to others, carbon.txt lets you:
 
 3. **Upload your carbon.txt file to your servers**
 
-  	For example: _<https://www.my-org.com/carbon.txt>_
+   For example: _<https://www.my-org.com/carbon.txt>_
 
-   	We default to checking for a file located at the root of your domain `/carbon.txt` or `/.well-known/carbon.txt`.
+   We default to checking for a file located at the root of your domain `/carbon.txt` or `/.well-known/carbon.txt`.
 
 4. **Share the URL of the carbon.txt file with Green Web Foundation**
 
