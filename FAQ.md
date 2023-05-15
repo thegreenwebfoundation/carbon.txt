@@ -1,20 +1,20 @@
-## FAQs
+# FAQs
 
 While this concept is still new, we expect that some edge cases will be encountered. Here are some frequently asked questions we have internally.
 
-### I am self-hosting my website, what can I do?
+## I am self-hosting my website, what can I do?
 
 For now, sit tight. We are currently working with larger organisations to pilot the carbon.txt specification. This will help us uncover use cases and implementation details that will be applicable to smaller providers and website operators.
 
 Expanding the carbon.txt specification to cater for self-hosted sites is on our roadmap. You can follow [this Github issue](https://github.com/thegreenwebfoundation/carbon.txt/issues/9) to keep updated with progress.
 
-### I run a website for my company/myself, what can I do?
+## I run a website for my company/myself, what can I do?
 
 For now, sit tight. We are currently working with larger organisations to pilot the carbon.txt specification. This will help us uncover use cases and implementation details that will be applicable to smaller providers and website operators.
 
 Expanding the carbon.txt specification to cater for individual websites is on our roadmap. You can follow [this Github issue](https://github.com/thegreenwebfoundation/carbon.txt/issues/17) to keep updated with progress.
 
-### Why this approach?
+## Why this approach?
 
 There are a few reasons for taking the approach we’ve described above.
 
@@ -24,7 +24,7 @@ We believe that providing a way for hosting providers/managed services to implem
 
 In the long run, we think that demonstrating how we can use existing internet and web standards to make sustainability claims easily discoverable, as well as human and machine readable, will result in a web where it's easier to trust green claims. Not only that, conventions like carbon.txt allows us follow green claims to the supporting evidence used to back them up.
 
-### What would stop me using someone else's carbon.txt file instead?
+## What would stop me using someone else's carbon.txt file instead?
 
 Domains must be associated to an organisation that is a verified green hosting provider with the Green Web Foundation before they show up as being green. This is to mitigate against bad actors taking credit for the green claims made in another organisation's carbon.txt file.
 
@@ -34,7 +34,7 @@ There are two ways to associate a domain with a verified green hosting provider:
 
 **2. Manually** - Green Web Foundation staff can manually create a record for a new domain, and associate with an existing verified green hosting provider.
 
-### How does this work for globally distributed providers?
+## How does this work for globally distributed providers?
 
 The internet is a distributed network by its very nature. And, many hosting providers - especially CDNs and edge compute services - will serve content from locations around the world. Some of these locations could be in regions that run entirely (or almost entirely) on green energy.
 
