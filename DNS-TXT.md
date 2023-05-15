@@ -6,7 +6,7 @@ To do this:
 
 1. **Follow the steps above to create your carbon.txt file**
 
-Follow Steps 1 to 4 of the [Getting Started guide](/README.md#getting-started) to create a carbon.txt file for your organisation.
+   Follow Steps 1 to 4 of the [Getting Started guide](/README.md#getting-started) to create a carbon.txt file for your organisation.
 
 2. **Create a domain hash for the domain you want to show as green**
 
