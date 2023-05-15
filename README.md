@@ -38,13 +38,13 @@ Carbon.txt serves to make links between these systems easier to follow. So when 
 If you provide hosted digital services to others, carbon.txt lets you:
 
 - Receive recognition, in a human and machine readable way, that the infrastructure you manage or use to provide your service runs on green energy.
-- Earn trust from customers by helping creating an evidence base of action being taken by providers to help the world transition to a fossil free internet.
+- Earn trust from customers by helping create an evidence base of action being taken by providers to help the world transition to a fossil free internet.
 - Allow any downstream services or websites using your services to make the same claims, with a clear chain of attribution.
 - Demonstrate leadership if you are moving faster in terms of a climate response than the organisations in your supply chain by linking to your own work.
 
 ## Getting started
 
-**Note: The carbon.txt specification is currently being trialled with digital service providers only. If you self-host, or have your own website, please see the [FAQ](/FAQ.md) for more information.
+\*\*Note: The carbon.txt specification is currently being trialled with digital service providers only. If you self-host, or have your own website, please see the [FAQ](/FAQ.md) for more information.
 
 ### For Digital Service Providers
 
