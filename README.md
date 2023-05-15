@@ -44,7 +44,7 @@ If you provide hosted digital services to others, carbon.txt lets you:
 
 ## Getting started
 
-\*\*Note: The carbon.txt specification is currently being trialled with digital service providers only. If you self-host, or have your own website, please see the [FAQ](/FAQ.md) for more information.
+**Note: The carbon.txt specification is currently being trialled with digital service providers only. If you self-host, or have your own website, please see the [FAQ](/FAQ.md) for more information.**
 
 ### For Digital Service Providers
 
