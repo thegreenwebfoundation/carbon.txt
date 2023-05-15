@@ -41,6 +41,7 @@ If you provide hosted digital services to others, carbon.txt lets you:
 - Earn trust from customers by helping create an evidence base of action being taken by providers to help the world transition to a fossil free internet.
 - Allow any downstream services or websites using your services to make the same claims, with a clear chain of attribution.
 - Demonstrate leadership if you are moving faster in terms of a climate response than the organisations in your supply chain by linking to your own work.
+- When customers check your service using the [Green Web Check](https://www.thegreenwebfoundation.org/green-web-check/), your organisation name will be shown rather than any CDNs or infrastructure providers you use.
 
 ## Getting started
 
