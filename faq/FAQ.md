@@ -20,7 +20,7 @@ Currently, we accept the doctypes below:
 
 - `annual-report`: An organisations annual sustainability reporting.
 - `webpage`: A web page outlining steps taken to avoid, reduce, or offset greenhouse gas emissions from service operations.
-- `certificate`: Certiicates showing the steps taken to purchase green energy, or offset greenhouse gas emissions from service operations.
+- `certificate`: Certificates showing the steps taken to purchase green energy, or offset greenhouse gas emissions from service operations.
 - `other`: A catch-all for everything else.
 
 ## Why this approach?
