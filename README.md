@@ -103,9 +103,9 @@ credentials = [
 
 _An example of a carbon.txt file for a digital service provider._
 
-#### What upstream provider services can I specificy?
+#### What upstream provider services are accepted?
 
-A list of accepted upstream provider services can be found on this [FAQ page](/FAQ-SERVICES.md).
+A list of accepted upstream provider services can be found on this [FAQ page](/faq/FAQ-SERVICES.md).
 
 If there's a particular service you'd like listed, but which isn't on that page then please contribute to [this issue](https://github.com/thegreenwebfoundation/carbon.txt/issues/16).
 
@@ -126,7 +126,7 @@ There are two supported ways to do this:
 
 Using DNS TXT records is intended for organisations who are able to add DNS records to both their own domain, as well as the domain they want to show up as green. If you own both domains, this option is for you.
 
-**[Guide: How to link multiple domains using DNS TXT records](/DNS-TXT.md)**
+**[Guide: How to link multiple domains using DNS TXT records](/guides/DNS-TXT.md)**
 
 #### Using HTTP Via Header
 
@@ -134,8 +134,8 @@ Using a HTTP Via Header is intended for organisations who are not able to add DN
 
 This option also allows you to "pass down" green claims to customer who use your service.
 
-**[Guide: How to link multiple domains using HTTP VIA HEADER](/VIA_HEADER.md)**
+**[Guide: How to link multiple domains using HTTP VIA HEADER](/guides/VIA_HEADER.md)**
 
 ## Unsure about something or have more questions?
 
-Read the [FAQ](/FAQ.md), or [raise an issue](/issues).
+Read the [FAQ](/faq/FAQ.md), or [raise an issue](/issues).
