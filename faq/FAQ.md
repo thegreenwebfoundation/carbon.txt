@@ -18,7 +18,7 @@ Expanding the carbon.txt specification to cater for individual websites is on ou
 
 A list of accepted upstream provider services can be found on [this FAQ page](/faq/FAQ-SERVICES.md).
 
-If there's a particular service you'd like listed, but which isn't on that page then please contribute to [this issue](/issues/16).
+If there's a particular service you'd like listed, but which isn't on that page then please contribute to [this issue](https://github.com/thegreenwebfoundation/carbon.txt/issues/16).
 
 ## What are the accepted `doctype` values that can be used?
 

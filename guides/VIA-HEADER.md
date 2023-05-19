@@ -26,4 +26,4 @@ We maintain a set of [server config setup examples folder on github](https://git
 
 ## Got more questions?
 
-Read the [FAQ](/faq/FAQ.md), or [raise an issue](/issues).
+Read the [FAQ](/faq/FAQ.md), or [raise an issue](https://github.com/thegreenwebfoundation/carbon.txt/issues).

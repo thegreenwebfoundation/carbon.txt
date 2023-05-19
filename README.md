@@ -138,4 +138,4 @@ This option also allows you to "pass down" green claims to customer who use your
 
 ## Unsure about something or have more questions?
 
-Read the [FAQ](/faq/FAQ.md), or [raise an issue](/issues).
+Read the [FAQ](/faq/FAQ.md), or [raise an issue](https://github.com/thegreenwebfoundation/carbon.txt/issues).
