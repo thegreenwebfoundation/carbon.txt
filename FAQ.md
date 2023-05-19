@@ -14,6 +14,15 @@ For now, sit tight. We are currently working with larger organisations to pilot 
 
 Expanding the carbon.txt specification to cater for individual websites is on our roadmap. You can follow [this Github issue](https://github.com/thegreenwebfoundation/carbon.txt/issues/17) to keep updated with progress.
 
+## What are the accepted `doctype` values that can be used?
+
+Currently, we accept the doctypes below:
+
+- `annual-report`: An organisations annual sustainability reporting.
+- `webpage`: A web page outlining steps taken to avoid, reduce, or offset greenhouse gas emissions from service operations.
+- `certificate`: Certiicates showing the steps taken to purchase green energy, or offset greenhouse gas emissions from service operations.
+- `other`: A catch-all for everything else.
+
 ## Why this approach?
 
 There are a few reasons for taking the approach we’ve described above.
