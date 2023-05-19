@@ -4,6 +4,13 @@ Below is a list of accepted upstream services that you can use in a carbon.txt f
 
 If there's a particular service you'd like listed, but which isn't on that page then please contribute to [this issue](https://github.com/thegreenwebfoundation/carbon.txt/issues/16)
 
+Jump to:
+
+- [Compute](#compute)
+- [Storage](#storage)
+- [Networks](#networks)
+- [Managed Services](#managed-services)
+
 ## Compute
 
 ### `shared-hosting`
