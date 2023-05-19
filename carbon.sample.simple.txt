@@ -11,5 +11,5 @@ providers = [
 credentials = [
     # Optional.
     # An array of documents that point to evidence of green claims made by my-org.com.
-    { domain='my-org.com', doctype = 'sustainability-page', url = 'https://my-org.com/our-climate-record'}
+    { domain='my-org.com', doctype = 'webpage', url = 'https://my-org.com/our-climate-record'}
 ]
