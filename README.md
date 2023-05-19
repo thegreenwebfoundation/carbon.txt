@@ -97,11 +97,17 @@ providers = [
 credentials = [
     # Optional.
     # An array of documents that point to evidence of green claims made by my-org.com.
-    { domain='my-org.com', doctype = 'sustainability-page', url = 'https://my-org.com/our-climate-record'}
+    { domain='my-org.com', doctype = 'webpage', url = 'https://my-org.com/our-climate-record'}
 ]
 ```
 
 _An example of a carbon.txt file for a digital service provider._
+
+#### What upstream provider services can I specificy?
+
+A list of accepted upstream provider services can be found on this [FAQ page](/FAQ-SERVICES.md).
+
+If there's a particular service you'd like listed, but which isn't on that page then please contribute to [this issue](https://github.com/thegreenwebfoundation/carbon.txt/issues/16).
 
 ## Linking green claims to multiple domains
 
