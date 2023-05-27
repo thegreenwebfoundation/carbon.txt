@@ -10,7 +10,9 @@ Carbon.txt supports using the [HTTP Via header](https://developer.mozilla.org/en
 
 2. **Create a domain hash for the domain you want to show as green**
 
-   Create a domain hash. This is a SHA256 hash of your shared secret and the domain you want to establish a link to. Various online tools demonstrate how to make SHA 256 hashes( [see this example](https://codebeautify.org/sha256-hash-generator)). To make it easier, you can do all this in [our own observable notebook](https://observablehq.com/d/21dbe07b6d399868).
+   Create a domain hash. This is a SHA256 hash of your shared secret and the domain you want to establish a link to.
+
+   You can complete this step on [our website](https://carbontxt.org/how/digital-services/link-multiple-domains/via#create-domain-hash)
 
 3. **Set the `via` header on HTTP responses to requests for the domain you want to show as green**
 

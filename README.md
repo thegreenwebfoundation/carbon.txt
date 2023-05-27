@@ -71,11 +71,7 @@ If you provide hosted digital services to others, carbon.txt lets you:
 
    The Green Web Foundation has an API for registering where to check for carbon.txt file for a given domain. Once this is listed, and the link established, your site shows as green.
 
-   ```curl
-   curl --request POST --location 'https://api.thegreenwebfoundation.org/api/v3/carbontxt' \
-   --header 'Content-Type: application/json' \
-   --data '{ "url": "https://my-org.com/carbon.txt" }'
-   ```
+   You can complete this step on [our website](https://carbontxt.org/how/digital-services#register-carbon-txt).
 
 5. **(Optional) Link other domains to your green claims if they are using infrastructure you control**
 
