@@ -1,28 +1,20 @@
-# How to link two domains using HTTP Via headers domain hashes
-
+# How to link two domains using HTTP headers
 HTTP requests and responses can contain a number of extra headers, which you can use to send along extra metadata about the server serving the request.
 
-Carbon.txt supports using the [HTTP Via header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/via), to declare that a HTTP response has been sent along by one or more intermediate entities. In our case usually a managed hosting provider.
+Carbon.txt supports using the `CarbonTxt-Location`, to declare that a HTTP response has been sent along by one or more intermediate entities. In our case usually a managed hosting provider.
 
 1. **Follow the steps above to create your carbon.txt file**
 
    Follow Steps 1 to 4 of the [Getting Started guide](/README.md#getting-started) to create a carbon.txt file for your organisation.
 
-2. **Create a domain hash for the domain you want to show as green**
 
-   Create a domain hash. This is a SHA256 hash of your shared secret and the domain you want to establish a link to.
+3. **Set the `CarbonTxt-Location` header on HTTP responses to requests for the domain you want to show as green**
 
-   You can complete this step on [our website](https://carbontxt.org/how/digital-services/link-multiple-domains/via#create-domain-hash)
-
-3. **Set the `via` header on HTTP responses to requests for the domain you want to show as green**
-
-   For example: _my-org.com_ also owns _me.my-org.com_. In order to link _me.my-org.com_ to the main carbon.txt file, when a request comes in for _me.my-org.com_, you would configure the server serving the request to add the following Via header.
+   For example: _my-org.com_ also owns _me.my-org.com_. In order to link _me.my-org.com_ to the main carbon.txt file, when a request comes in for _me.my-org.com_, you would configure the server serving the request to add the following header.
 
    ```HTTP
-    Via: 1.1 https://my-org.com/carbon.txt <generated_domain_hash>
+    CarbonTxt-Location: https://my-org.com/carbon.txt
    ```
-
-   **Note**: the domain hash would be a 64 character hash of me.my-org.com and your shared secret.
 
 We maintain a set of [server config setup examples folder on github](https://github.com/thegreenwebfoundation/carbon.txt/tree/master/examples), for popular open source servers like Nginx, Caddy, Apache, and so on (pull requests gratefully accepted).
 
