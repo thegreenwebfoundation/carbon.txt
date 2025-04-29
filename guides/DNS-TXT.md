@@ -4,11 +4,11 @@ DNS text records are frequently used to help organisations demonstrate they have
 
 To do this:
 
-1. **Follow the steps above to create your carbon.txt file**
+1. **Create your carbon.txt file**
 
-   Follow Steps 1 to 4 of the [Getting Started guide](/README.md#getting-started) to create a carbon.txt file for your organisation.
+   Follow Steps 1 to 3 of the [Getting Started guide](https://carbontxt.org/quickstart) to create a carbon.txt file for your organisation.
 
-3. **Set a DNS record for the domains you want to link back to your main carbon.txt**
+2. **Set a DNS record for the domains you want to link back to your main carbon.txt**
 
    Add the DNS TXT record for the domain you want to link back to your main carbon.txt file, with the location of the carbon.txt file.
 

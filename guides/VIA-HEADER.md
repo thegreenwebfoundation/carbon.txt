@@ -1,14 +1,14 @@
 # How to link two domains using HTTP headers
+
 HTTP requests and responses can contain a number of extra headers, which you can use to send along extra metadata about the server serving the request.
 
 Carbon.txt supports using the `CarbonTxt-Location`, to declare that a HTTP response has been sent along by one or more intermediate entities. In our case usually a managed hosting provider.
 
-1. **Follow the steps above to create your carbon.txt file**
+1. **Create your carbon.txt file**
 
-   Follow Steps 1 to 4 of the [Getting Started guide](/README.md#getting-started) to create a carbon.txt file for your organisation.
+   Follow Steps 1 to 3 of the [Getting Started guide](https://carbontxt.org/quickstart) to create a carbon.txt file for your organisation.
 
-
-3. **Set the `CarbonTxt-Location` header on HTTP responses to requests for the domain you want to show as green**
+2. **Set the `CarbonTxt-Location` header on HTTP responses to requests for the domain you want to show as green**
 
    For example: _my-org.com_ also owns _me.my-org.com_. In order to link _me.my-org.com_ to the main carbon.txt file, when a request comes in for _me.my-org.com_, you would configure the server serving the request to add the following header.
 
