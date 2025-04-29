@@ -39,16 +39,6 @@ We believe that providing a way for hosting providers/managed services to implem
 
 In the long run, we think that demonstrating how we can use existing internet and web standards to make sustainability claims easily discoverable, as well as human and machine readable, will result in a web where it's easier to trust green claims. Not only that, conventions like carbon.txt allows us follow green claims to the supporting evidence used to back them up.
 
-## What would stop me using someone else's carbon.txt file instead?
-
-Domains must be associated to an organisation that is a [verified green hosting provider](https://www.thegreenwebfoundation.org/green-web-datasets/get-verified/) with the Green Web Foundation before they show up as being green. This is to mitigate against bad actors taking credit for the green claims made in another organisation's carbon.txt file.
-
-There are two ways to associate a domain with a verified green hosting provider:
-
-**1. Using domain hashes** - New domains are only automatically recognised as green, and associated to a verified green provider, if there is a matching domain hash available when they are first submitted/checked through the Greencheck API.
-
-**2. Manually** - Green Web Foundation staff can manually create a record for a new domain, and associate with an existing verified green hosting provider.
-
 ## How does this work for globally distributed providers?
 
 The internet is a distributed network by its very nature. And, many hosting providers - especially CDNs and edge compute services - will serve content from locations around the world. Some of these locations could be in regions that run entirely (or almost entirely) on green energy.
