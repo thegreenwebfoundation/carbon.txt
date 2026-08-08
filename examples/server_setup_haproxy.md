@@ -27,7 +27,7 @@ flowchart LR
 In your `frontend`, you decide whether to send a request to the carbon.txt backend based on two conditions:
 
 ```haproxy
-acl is-carbon-txt-acl path /carbon.txt
+acl is-carbon-txt-acl path /carbon.txt /.well-known/carbon.txt
 acl should-use-carbon-txt-policy hdr(host) -M -f /etc/haproxy/servecarbontxt.map
 
 use_backend bk_carbon_txt if is-carbon-txt-acl should-use-carbon-txt-policy
