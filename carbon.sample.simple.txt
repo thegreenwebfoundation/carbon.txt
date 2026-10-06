@@ -1,15 +1,17 @@
-## This is a sample carbon.txt file for a digital service provider.
+version = "0.6"
+last_updated=2026-10-06
 
-[upstream]
-providers = [
-    # An array of providers my-org.com is using to deliver our service
-    { domain='cloud.google.com', service = 'shared-hosting' },
-    { domain='aws.amazon.com', service = 'cdn' }
-]
 
 [org]
-credentials = [
+disclosures = [
     # Optional.
     # An array of documents that point to evidence of green claims made by my-org.com.
-    { domain='my-org.com', doctype = 'webpage', url = 'https://my-org.com/our-climate-record'}
+    { doc_type = 'web-page', url = 'https://my-org.com/our-climate-record'}
+]
+
+[upstream]
+services = [
+    # An array of providers my-org.com is using to deliver our service
+    { domain='cloud.google.com', service_type = 'shared-hosting' },
+    { domain='aws.amazon.com', service_type = 'cdn' }
 ]
